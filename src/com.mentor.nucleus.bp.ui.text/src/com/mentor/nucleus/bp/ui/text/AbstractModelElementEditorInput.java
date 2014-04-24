@@ -10,6 +10,9 @@
 //
 package com.mentor.nucleus.bp.ui.text;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.IEditorInput;
@@ -142,6 +145,29 @@ public abstract class AbstractModelElementEditorInput extends FileEditorInput im
 	}
 
 	/**
+	 * This method returns a qualified name of the model element, or null
+	 */
+	public String getQualifedModelElementName() {
+		Object element = getModelElement();
+		Method method = null;
+		String result = null;
+		try {
+			method = element.getClass().getMethod("Getqualifiedname");
+		} catch (SecurityException e) {
+		} catch (NoSuchMethodException e) {
+		}
+		if (method != null) {
+			try {
+				result = (String) method.invoke(element);
+			} catch (IllegalArgumentException e) {
+			} catch (IllegalAccessException e) {
+			} catch (InvocationTargetException e) {
+			}
+		}
+		return result;
+	}	
+	
+	/**
 	 * Provides adaption to model element id, model element and model root, 
 	 * according to guideline provided by the implementation of FileEditorInput, 
 	 * which adapts to IFile. This does not necessarily provides any utility at 
@@ -217,4 +243,5 @@ public abstract class AbstractModelElementEditorInput extends FileEditorInput im
 		}
 		return this;
 	}
+
 }

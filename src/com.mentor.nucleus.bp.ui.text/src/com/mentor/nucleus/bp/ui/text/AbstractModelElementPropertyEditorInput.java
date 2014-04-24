@@ -141,12 +141,16 @@ public abstract class AbstractModelElementPropertyEditorInput extends AbstractMo
 	}
 
 	/**
-	 * Uses getName to display the tip.
+	 * Use the qualifed name in the Model as Tool Tip. Fall back to getName.
 	 * 
 	 * @see org.eclipse.ui.IEditorInput#getToolTipText()
 	 */
 	public String getToolTipText() {
-		return getName();
+		String qualifiedName = getQualifedModelElementName();
+		if (qualifiedName == null) {
+			qualifiedName = getName();
+		}
+		return qualifiedName;
 	}
 
 	/**
