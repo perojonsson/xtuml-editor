@@ -597,6 +597,17 @@ INSERT INTO O_TPARM
 	'',
 	"79908e4c-773d-436b-b634-fc00358e63b8",
 	'');
+INSERT INTO O_TFR
+	VALUES ("0c8a3b52-3abc-4544-8364-cf44e3eaa50f",
+	"ead52fac-9782-434b-a35c-c07452c3b26d",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'return self.getPath(path: "", includeSelf: true);',
+	1,
+	'',
+	"2bf571a5-4f94-404e-899f-1b2ed2dafc5a");
 INSERT INTO O_NBATTR
 	VALUES ("cbfb448a-f0dc-4961-8e66-276b89eed6d4",
 	"ead52fac-9782-434b-a35c-c07452c3b26d");

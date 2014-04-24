@@ -836,6 +836,18 @@ return signature;',
 	1,
 	'',
 	"3a6520c0-ab28-4e05-9723-762bd4e7eb45");
+INSERT INTO O_TFR
+	VALUES ("89b8662d-e31a-4a23-8957-4bc0ace1adcc",
+	"47a1eb94-2620-4ecd-85d3-29f76391509f",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'select one external_entity related by self->S_EE[R19];
+return external_entity.getPath() + "::" + self.Name;',
+	1,
+	'',
+	"683e2b72-4be1-4c1b-ae03-dbffe2cb5112");
 INSERT INTO O_NBATTR
 	VALUES ("eab964fb-80ce-4810-ba03-8a871dfc6923",
 	"47a1eb94-2620-4ecd-85d3-29f76391509f");
@@ -1019,7 +1031,7 @@ INSERT INTO O_REF
 	'',
 	'Data Type',
 	'DT_ID',
-	'R20');
+	'R20.''return value defined by''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("47a1eb94-2620-4ecd-85d3-29f76391509f",
 	"52039f98-c9f3-4802-962f-149b90e04bdf",
@@ -1077,7 +1089,7 @@ INSERT INTO O_REF
 	'',
 	'External Entity',
 	'EE_ID',
-	'R19');
+	'R19.''provides access to''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("47a1eb94-2620-4ecd-85d3-29f76391509f",
 	"618bac65-e14f-4550-a88f-575c9e20bd2d",

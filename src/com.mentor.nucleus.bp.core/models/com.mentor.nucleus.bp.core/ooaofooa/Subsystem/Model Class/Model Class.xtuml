@@ -1816,6 +1816,18 @@ end for;',
 	1,
 	'',
 	"f1a5f54c-2f3e-4d38-9d5b-ecffdc78a14c");
+INSERT INTO O_TFR
+	VALUES ("99ce6fff-f638-4986-ae37-72ead8b2fc37",
+	"b7630071-9e2a-4183-9986-779dca14c275",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'//Model_Class::getQualifiedName()
+return self.getPath(path: "", includeSelf: true);',
+	1,
+	'',
+	"ee548b22-87a3-41b0-96e4-501ea5511865");
 INSERT INTO O_NBATTR
 	VALUES ("abd8f188-4260-4e03-9844-41b21ef751b3",
 	"b7630071-9e2a-4183-9986-779dca14c275");

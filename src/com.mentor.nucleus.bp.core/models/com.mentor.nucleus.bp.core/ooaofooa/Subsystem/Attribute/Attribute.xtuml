@@ -1087,6 +1087,25 @@ end for;',
 	1,
 	'',
 	"f854ce28-93eb-4799-a3b7-103e85e0faa6");
+INSERT INTO O_TFR
+	VALUES ("76e9c845-00b3-42fd-84dc-d6e4c5b51f76",
+	"d931d595-21f3-4ce8-bad1-6661a0e261b8",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'//Attribute::getQualifiedName()
+result = "";
+select one modelclass related by self->O_OBJ[R102.''abstracts characteristics of''];
+result = modelclass.getQualifiedName();
+if result != ""
+  result = result + "::";
+end if;
+result = result + self.Name;
+return result;',
+	1,
+	'',
+	"5e32d1d5-3602-4b38-b96e-49c0a64464a5");
 INSERT INTO O_NBATTR
 	VALUES ("fcdcb857-f08e-413d-bf60-637f228f1941",
 	"d931d595-21f3-4ce8-bad1-6661a0e261b8");
@@ -1121,7 +1140,7 @@ INSERT INTO O_REF
 	'',
 	'Attribute',
 	'Attr_ID',
-	'R103');
+	'R103.''succeeds''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("d931d595-21f3-4ce8-bad1-6661a0e261b8",
 	"9e3e32ea-b1ca-4976-960d-d05d8ea26753",
@@ -1338,7 +1357,7 @@ INSERT INTO O_REF
 	'',
 	'Data Type',
 	'DT_ID',
-	'R114');
+	'R114.''defines type of''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("d931d595-21f3-4ce8-bad1-6661a0e261b8",
 	"14334a89-3f24-4ee1-863a-9e95d7252700",
@@ -1389,7 +1408,7 @@ INSERT INTO O_REF
 	'',
 	'Model Class',
 	'Obj_ID',
-	'R102');
+	'R102.''abstracts characteristics of''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("d931d595-21f3-4ce8-bad1-6661a0e261b8",
 	"ead7527d-2e25-4550-b604-6ba93c18a4da",
@@ -1417,7 +1436,7 @@ INSERT INTO O_REF
 	'',
 	'Attribute',
 	'Obj_ID',
-	'R103');
+	'R103.''succeeds''');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("6b246834-4863-4867-827c-9484e9cedcbf",
 	"d931d595-21f3-4ce8-bad1-6661a0e261b8",

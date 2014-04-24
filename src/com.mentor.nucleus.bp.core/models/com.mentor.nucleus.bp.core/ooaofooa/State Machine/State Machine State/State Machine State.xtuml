@@ -674,6 +674,19 @@ end for;',
 	1,
 	'',
 	"5ff5bb03-7c4c-45de-bd3d-b0e90a4f7774");
+INSERT INTO O_TFR
+	VALUES ("063ce352-7f35-4bfd-95f9-6f6741d00699",
+	"aee0c0bf-2bc2-41e5-b9ad-01341d2944be",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'select one SM related by self->SM_SM[R501];
+return SM.getQualifiedName() + "::" + self.Name; 
+',
+	1,
+	'',
+	"d0c5877b-18e9-4c93-8b50-0a7a5e918a23");
 INSERT INTO O_NBATTR
 	VALUES ("c1895e17-60ab-46d5-b6a1-e61e34c67638",
 	"aee0c0bf-2bc2-41e5-b9ad-01341d2944be");

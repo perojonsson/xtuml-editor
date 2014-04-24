@@ -903,6 +903,18 @@ return signature;',
 	1,
 	'',
 	"9d318c1d-0992-4718-84b1-34a691ec9739");
+INSERT INTO O_TFR
+	VALUES ("b7399f07-3245-4d8b-8b72-6277919e707b",
+	"bc9a6c16-8809-4681-92ab-421898fa108a",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'return self.getPath();
+',
+	1,
+	'',
+	"db818c67-a176-46df-95bd-be1be9a0ddee");
 INSERT INTO O_REF
 	VALUES ("bc9a6c16-8809-4681-92ab-421898fa108a",
 	"07cf2195-f012-4bf5-83c7-f89dd30a8839",
@@ -918,7 +930,7 @@ INSERT INTO O_REF
 	'',
 	'Domain',
 	'Dom_ID',
-	'R23');
+	'R23.''is defined in ''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("bc9a6c16-8809-4681-92ab-421898fa108a",
 	"d842893b-f5ab-4cbc-92e1-cd4436c1ec0d",
@@ -1101,7 +1113,7 @@ INSERT INTO O_REF
 	'',
 	'Data Type',
 	'DT_ID',
-	'R25');
+	'R25.''has return type of''');
 INSERT INTO R_RGO_PROXY
 	VALUES ("bc9a6c16-8809-4681-92ab-421898fa108a",
 	"c1e69dd4-ad0a-41a9-82cc-b58b72eb7f0b",

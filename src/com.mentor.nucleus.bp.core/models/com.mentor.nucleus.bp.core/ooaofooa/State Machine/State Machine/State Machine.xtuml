@@ -1,4 +1,4 @@
--- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.6
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
 
 INSERT INTO O_OBJ
 	VALUES ("92c4f346-0aca-4da2-b132-f4de66fee3e6",
@@ -848,10 +848,10 @@ select one classSM related by self->SM_ASM[R517];
 select one instSM related by self->SM_ISM[R517];
 if (not_empty classSM)
     select one modelClass related by classSM->O_OBJ[R519];
-    result ="::Class Based Satate Machine::"+modelClass.getPath(path:modelClass.Name,includeSelf:true);
+    result ="::Class Based State Machine::"+modelClass.getPath(path:modelClass.Name,includeSelf:true);
 elif (not_empty instSM)
     select one modelClass related by instSM->O_OBJ[R518];
-    result ="::Instance Based Satate Machine::"+modelClass.getPath(path:modelClass.Name,includeSelf:true);
+    result ="::Instance Based State Machine::"+modelClass.getPath(path:modelClass.Name,includeSelf:true);
 end if; 
 
 return result;
@@ -860,6 +860,28 @@ return result;
 	1,
 	'',
 	"2470b25d-70b2-49ce-8b5c-2b78ae2741eb");
+INSERT INTO O_TFR
+	VALUES ("c95fe228-c9f0-4e0c-a060-82383eec76d5",
+	"92c4f346-0aca-4da2-b132-f4de66fee3e6",
+	'getQualifiedName',
+	'',
+	"528ced7e-5308-4195-8093-ca0c55401f58",
+	1,
+	'result= "";
+select one classSM related by self->SM_ASM[R517];
+select one instSM related by self->SM_ISM[R517];
+if (not_empty classSM)
+    select one modelClass related by classSM->O_OBJ[R519];
+    result = modelClass.getQualifiedName() + "::Class Based State Machine";
+elif (not_empty instSM)
+    select one modelClass related by instSM->O_OBJ[R518];
+    result = modelClass.getQualifiedName() + "::Instance Based State Machine";
+end if; 
+
+return result;',
+	1,
+	'',
+	"267b3cf2-8214-46a8-b90b-c149923d9b52");
 INSERT INTO O_NBATTR
 	VALUES ("a791a1ed-e1c8-4d68-9963-2e6d2379b544",
 	"92c4f346-0aca-4da2-b132-f4de66fee3e6");
