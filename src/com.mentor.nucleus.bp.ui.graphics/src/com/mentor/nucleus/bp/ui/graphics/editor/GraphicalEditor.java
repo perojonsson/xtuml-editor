@@ -512,15 +512,14 @@ public class GraphicalEditor extends GraphicalEditorWithFlyoutPalette implements
 		Object element = getModel().getRepresents();
 		Method method = null;
 		try {
-			method = element.getClass().getMethod("Getpath",
-					new Class[] { String.class });
+			method = element.getClass().getMethod("Getqualifiedname");
 		} catch (SecurityException e) {
 		} catch (NoSuchMethodException e) {
 		}
 		if (method != null) {
 			String result = getPartName();
 			try {
-				result = (String) method.invoke(element, new Object[] { "" });
+				result = (String) method.invoke(element);
 			} catch (IllegalArgumentException e) {
 			} catch (IllegalAccessException e) {
 			} catch (InvocationTargetException e) {
